@@ -102,91 +102,90 @@ const SidebarContent = props => {
             <li className="menu-title">{props.t("Menu")} </li>
             <li>
               <Link to="/dashboard" className="">
-                <FeatherIcon
-                  icon="home"
-                />
+                <i className="mdi mdi-24px mdi-view-dashboard"></i>
                 <span>{props.t("Dashboard")}</span>
               </Link>
             </li>
 
             <li>
               <Link to="/map" className="">
-                <FeatherIcon
-                  icon="map"
-                />
+                <i className="mdi mdi-24px mdi-map"></i>
                 <span>{props.t("Maps")}</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/call" className="">
-                <FeatherIcon
-                  icon="phone"
-                />
-                <span>{props.t("Calls")}</span>
+              <Link to="/orders" className="">
+                <i className="mdi mdi-24px mdi-phone-plus-outline"></i>
+                <span>{props.t("Orders")}</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/vehicle" className="">
-                <FeatherIcon
-                  icon="truck"
-                />
+              <Link to="/cars" className="">
+                <i className="mdi mdi-24px mdi-car-back"></i>
                 <span>{props.t("Cars")}</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/customer" className="">
-                <FeatherIcon
-                  icon="user"
-                />
-                <span>{props.t("Customers")}</span>
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/payment" className="">
-                <FeatherIcon
-                  icon="credit-card"
-                />
-                <span>{props.t("Payments")}</span>
+              <Link to="/contacts" className="">
+                <i className="fas fa-users"></i>
+                <span>{props.t("Contacts")}</span>
               </Link>
             </li>
 
             <li className="menu-title"> </li>
-            <li className="menu-title">{props.t("My Organization")} </li>
 
             <li>
-              <Link to="/invoice" className="">
+              <Link to="/#" className="has-arrow">
                 <FeatherIcon
-                  icon="file-text"
+                  icon="grid"
                 />
-                <span>{props.t("Invoices")}</span>
+                <span>{props.t("My Organization")}</span>
               </Link>
+              <ul className="sub-menu">
+
+                <li>
+                  <Link to="/invoices" className="">
+                    <i className="mdi mdi-24px mdi-file-document"></i>
+                    <span>{props.t("Invoices")}</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/fleet" className="">
+                    <i className="mdi mdi-24px mdi-tow-truck"></i>
+                    <span>{props.t("Fleet")}</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/teams" className="">
+                     <i className="fas fa-users-cog"></i>
+                    <span>{props.t("Teams")}</span>
+                  </Link>
+                </li>
+
+              </ul>
             </li>
 
-            <li>
-              <Link to="/vehicle" className="">
-                <FeatherIcon
-                  icon="truck"
-                />
-                <span>{props.t("Vehicle")}</span>
-              </Link>
-            </li>
 
-            <li>
-              <Link to="/user" className="">
-                <FeatherIcon
-                  icon="users"
-                />
-                <span>{props.t("Users")} / {props.t("Drivers")}</span>
-              </Link>
-            </li>
+
 
             <li className="menu-title"> </li>
             <li className="menu-title"> </li>
             <li className="menu-title">{props.t("------")} </li>
+
+            <li>
+              <Link to="/apps-calendar">{props.t("Calendar")}</Link>
+            </li>
+
+            <li>
+              <Link to="/apps-chat">
+                {props.t("Chat")}
+              </Link>
+            </li>
 
             <li>
               <Link to="/#" className="has-arrow">
@@ -199,53 +198,11 @@ const SidebarContent = props => {
                 <li>
                   <Link to="/apps-calendar">{props.t("Calendar")}</Link>
                 </li>
+
                 <li>
                   <Link to="/apps-chat">
                     {props.t("Chat")}
                   </Link>
-                </li>
-                <li>
-                  <Link to="/#" className="has-arrow">
-                    <span>{props.t("Email")}</span>
-                  </Link>
-                  <ul className="sub-menu">
-                    <li>
-                      <Link to="/email-inbox">{props.t("Inbox")}</Link>
-                    </li>
-                    <li>
-                      <Link to="/email-read">{props.t("Read Email")} </Link>
-                    </li>
-
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/#" className="has-arrow">
-                    <span>{props.t("Invoices")}</span>
-                  </Link>
-                  <ul className="sub-menu">
-                    <li>
-                      <Link to="/invoices-list">{props.t("Invoice List")}</Link>
-                    </li>
-                    <li>
-                      <Link to="/invoices-detail">{props.t("Invoice Detail")}</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/#" className="has-arrow ">
-                    <span>{props.t("Contacts")}</span>
-                  </Link>
-                  <ul className="sub-menu">
-                    <li>
-                      <Link to="/contacts-grid">{props.t("User Grid")}</Link>
-                    </li>
-                    <li>
-                      <Link to="/contacts-list">{props.t("User List")}</Link>
-                    </li>
-                    <li>
-                      <Link to="/contacts-profile">{props.t("Profile")}</Link>
-                    </li>
-                  </ul>
                 </li>
 
               </ul>

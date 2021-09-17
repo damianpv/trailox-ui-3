@@ -26,7 +26,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { getUsers as onGetUsers } from "../../store/contacts/actions";
 
-const ContactsGrid = (props) => {
+const TeamsGrid = (props) => {
   const dispatch = useDispatch();
 
   const { users } = useSelector((state) => ({
@@ -47,7 +47,7 @@ const ContactsGrid = (props) => {
         </MetaTags>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Contacts" breadcrumbItem="User Grid" />
+          <Breadcrumbs title="Contacts" breadcrumbItem="Teams Grid" />
           <Row className="align-items-center">
             <Col md={6}>
               <div className="mb-3">
@@ -136,4 +136,4 @@ const ContactsGrid = (props) => {
   );
 };
 
-export default withRouter(ContactsGrid);
+export default withRouter(TeamsGrid);

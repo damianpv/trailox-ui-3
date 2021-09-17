@@ -136,8 +136,8 @@ const InvoiceList = () => {
         </MetaTags>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Invoices" linkTitle="#" breadcrumbItem="Invoice List" />
-          <Breadcrumbs title="Invoices" linkTitle="invoices-detail" breadcrumbItem="Invoice Detail" />
+          <Breadcrumbs title="Orders" linkTitle="#" breadcrumbItem="Orders List" />
+          <Breadcrumbs title="Orders" linkTitle="orders-detail" breadcrumbItem="Orders Detail" />
           <Row>
             <Col lg="12">
               <Card>

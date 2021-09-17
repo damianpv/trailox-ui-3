@@ -43,7 +43,7 @@ import { isEmpty, size, map } from "lodash"
 //redux
 import { useSelector, useDispatch } from "react-redux"
 
-const ContactsList = props => {
+const FleetList = props => {
   const dispatch = useDispatch()
 
   const { users } = useSelector(state => ({
@@ -273,9 +273,8 @@ const ContactsList = props => {
         </MetaTags>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Contacts" breadcrumbItem="Contacts List" />
-          <Breadcrumbs title="Contacts" linkTitle="contacts-profile" breadcrumbItem="Contacts Profile" />
-          <Breadcrumbs title="Contacts" linkTitle="contacts-grid" breadcrumbItem="Contacts Grid" />
+          <Breadcrumbs title="Cars" breadcrumbItem="Cars List" />
+          <Breadcrumbs title="Cars" linkTitle="cars-profile" breadcrumbItem="Cars Profile" />
           <Row>
             <Col lg="12">
               <Card>
@@ -485,4 +484,4 @@ const ContactsList = props => {
   )
 }
 
-export default withRouter(ContactsList)
+export default withRouter(FleetList)

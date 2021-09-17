@@ -7,6 +7,10 @@ import Dashboard from "../pages/Dashboard/index";
 //Map
 import Map from "../pages/Map/index";
 
+//Cars
+import CarsList from "../pages/Cars/CarsList/cars-list";
+import CarsProfile from "../pages/Cars/CarsProfile/cars-profile";
+
 // Calendar
 import Calendar from "../pages/Calendar/index";
 
@@ -22,9 +26,20 @@ import InvoicesList from "../pages/Invoices/invoices-list";
 import InvoiceDetail from "../pages/Invoices/invoices-detail"
 
 //Contact
-import ContactsGrid from "../pages/Contacts/contacts-grid";
 import ContactsList from "../pages/Contacts/ContactList/contacts-list";
 import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile";
+
+//Teams
+import TeamsDetail from "../pages/Teams/TeamsDetail/teams-detail";
+import TeamsGrid from "../pages/Teams/teams-grid";
+
+//Orders
+import OrdersList from "../pages/Orders/orders-list";
+import OrdersDetail from "../pages/Orders/orders-detail";
+
+//Fleet
+import FleetList from "../pages/Fleet/FleetList/fleet-list";
+import FleetProfile from "../pages/Fleet/FleetProfile/fleet-profile";
 
 //Utility
 import PagesStarter from "../pages/Utility/StarterPage";
@@ -113,6 +128,10 @@ const userRoutes = [
   //map
   { path: "/map", component: Map },
 
+  //Cars
+  { path: "/cars", component: CarsList },
+  { path: "/cars-profile", component: CarsProfile },
+
   //profile
   { path: "/profile", component: userProfile },
 
@@ -127,13 +146,24 @@ const userRoutes = [
   { path: "/email-read", component: EmailRead },
 
   //Invoice
-  { path: "/invoices-list", component: InvoicesList },
+  { path: "/invoices", component: InvoicesList },
   { path: "/invoices-detail", component: InvoiceDetail },
 
   //Contact
-  { path: "/contacts-grid", component: ContactsGrid },
-  { path: "/contacts-list", component: ContactsList },
+  { path: "/contacts", component: ContactsList },
   { path: "/contacts-profile", component: ContactsProfile },
+
+  //Teams
+  { path: "/teams", component: TeamsGrid },
+  { path: "/teams-detail", component: TeamsDetail },
+
+  //Orders
+  { path: "/orders", component: OrdersList },
+  { path: "/orders-detail", component: OrdersDetail },
+
+  //Fleet
+  { path: "/fleet", component: FleetList },
+  { path: "/fleet-profile", component: FleetProfile },
 
   //Utility
   { path: "/pages-starter", component: PagesStarter },
