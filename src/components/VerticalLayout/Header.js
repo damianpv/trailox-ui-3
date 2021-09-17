@@ -11,7 +11,7 @@ import 'react-drawer/lib/react-drawer.css';
 import FeatherIcon from "feather-icons-react";
 
 // Reactstrap
-import { Dropdown, DropdownToggle, DropdownMenu, Row, Col } from "reactstrap";
+// import { Dropdown, DropdownToggle, DropdownMenu, Row, Col } from "reactstrap";
 
 // Import menuDropdown
 // import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown";
@@ -23,12 +23,12 @@ import LightDark from "../CommonForBoth/Menus/LightDark";
 // import images
 import logoSvg from "../../assets/images/logo-light.png";
 import logoShortSvg from "../../assets/images/logo-sm.png";
-import github from "../../assets/images/brands/github.png";
-import bitbucket from "../../assets/images/brands/bitbucket.png";
-import dribbble from "../../assets/images/brands/dribbble.png";
-import dropbox from "../../assets/images/brands/dropbox.png";
-import mail_chimp from "../../assets/images/brands/mail_chimp.png";
-import slack from "../../assets/images/brands/slack.png";
+// import github from "../../assets/images/brands/github.png";
+// import bitbucket from "../../assets/images/brands/bitbucket.png";
+// import dribbble from "../../assets/images/brands/dribbble.png";
+// import dropbox from "../../assets/images/brands/dropbox.png";
+// import mail_chimp from "../../assets/images/brands/mail_chimp.png";
+// import slack from "../../assets/images/brands/slack.png";
 
 //i18n
 import { withTranslation } from "react-i18next";
@@ -44,18 +44,21 @@ import {
 const Header = props => {
   const { onChangeLayoutMode } = props;
   const [search, setsearch] = useState(false);
-  const [socialDrp, setsocialDrp] = useState(false);
+  // const [socialDrp, setsocialDrp] = useState(false);
   const [isClick, setClick] = useState(true);
-  const [position, setPosition] = useState();
+  const [
+    position,
+    // setPosition
+  ] = useState();
   const [open, setOpen] = useState(false);
 
   /**
    * Rightsidebar drawer
    */
-  const toggleTopDrawer = () => {
-    setPosition('right');
-    setOpen(!open);
-  };
+  // const toggleTopDrawer = () => {
+  //   setPosition('right');
+  //   setOpen(!open);
+  // };
 
   const onDrawerClose = () => {
     setOpen(false);

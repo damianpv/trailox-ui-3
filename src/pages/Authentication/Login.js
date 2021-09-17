@@ -13,18 +13,21 @@ import { withRouter, Link } from "react-router-dom"
 import { AvForm, AvField } from "availity-reactstrap-validation"
 
 //Social Media Imports
-import { GoogleLogin } from "react-google-login"
+// import { GoogleLogin } from "react-google-login"
 // import TwitterLogin from "react-twitter-auth"
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
+// import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
 
 // actions
-import { loginUser, socialLogin } from "../../store/actions"
+import {
+  loginUser,
+  // socialLogin
+} from "../../store/actions"
 
 // import images
 import logo from "../../assets/images/logo-light.png"
 
 //Import config
-import { facebook, google } from "../../config"
+// import { facebook, google } from "../../config"
 import CarouselPage from "../AuthenticationInner/CarouselPage"
 
 const Login = props => {
@@ -39,38 +42,38 @@ const Login = props => {
     dispatch(loginUser(values, props.history))
   }
 
-  const signIn = (res, type) => {
-    if (type === "google" && res) {
-      const postData = {
-        name: res.profileObj.name,
-        email: res.profileObj.email,
-        token: res.tokenObj.access_token,
-        idToken: res.tokenId,
-      }
-      dispatch(socialLogin(postData, props.history, type))
-    } else if (type === "facebook" && res) {
-      const postData = {
-        name: res.name,
-        email: res.email,
-        token: res.accessToken,
-        idToken: res.tokenId,
-      }
-      dispatch(socialLogin(postData, props.history, type))
-    }
-  }
+  // const signIn = (res, type) => {
+  //   if (type === "google" && res) {
+  //     const postData = {
+  //       name: res.profileObj.name,
+  //       email: res.profileObj.email,
+  //       token: res.tokenObj.access_token,
+  //       idToken: res.tokenId,
+  //     }
+  //     dispatch(socialLogin(postData, props.history, type))
+  //   } else if (type === "facebook" && res) {
+  //     const postData = {
+  //       name: res.name,
+  //       email: res.email,
+  //       token: res.accessToken,
+  //       idToken: res.tokenId,
+  //     }
+  //     dispatch(socialLogin(postData, props.history, type))
+  //   }
+  // }
 
   //handleGoogleLoginResponse
-  const googleResponse = response => {
-    signIn(response, "google")
-  }
+  // const googleResponse = response => {
+  //   signIn(response, "google")
+  // }
 
   //handleTwitterLoginResponse
   // const twitterResponse = e => {}
 
   //handleFacebookLoginResponse
-  const facebookResponse = response => {
-    signIn(response, "facebook")
-  }
+  // const facebookResponse = response => {
+  //   signIn(response, "facebook")
+  // }
 
   return (
     <React.Fragment>

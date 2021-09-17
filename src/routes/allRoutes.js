@@ -4,6 +4,9 @@ import { Redirect } from "react-router-dom"
 //Dashboard
 import Dashboard from "../pages/Dashboard/index";
 
+//Map
+import Map from "../pages/Map/index";
+
 // Calendar
 import Calendar from "../pages/Calendar/index";
 
@@ -86,11 +89,6 @@ import IconMaterialdesign from "../pages/Icons/IconMaterialdesign";
 import IconDripicons from "../pages/Icons/IconDripicons";
 import IconFontawesome from "../pages/Icons/IconFontawesome";
 
-// Maps
-import MapsGoogle from "../pages/Maps/MapsGoogle"
-import MapsVector from "../pages/Maps/MapsVector"
-import MapsLeaflet from "../pages/Maps/MapsLeaflet"
-
 // Authentication related pages
 import Login from "../pages/Authentication/Login"
 import Logout from "../pages/Authentication/Logout"
@@ -111,6 +109,9 @@ const userRoutes = [
 
   //dashboard
   { path: "/dashboard", component: Dashboard },
+
+  //map
+  { path: "/map", component: Map },
 
   //profile
   { path: "/profile", component: userProfile },
@@ -192,11 +193,6 @@ const userRoutes = [
   { path: "/icons-materialdesign", component: IconMaterialdesign },
   { path: "/icons-dripicons", component: IconDripicons },
   { path: "/icons-fontawesome", component: IconFontawesome },
-
-  // Maps
-  { path: "/maps-google", component: MapsGoogle },
-  { path: "/maps-vector", component: MapsVector },
-  { path: "/maps-leaflet", component: MapsLeaflet },
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },

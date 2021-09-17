@@ -114,7 +114,7 @@ const SidebarContent = props => {
                 <FeatherIcon
                   icon="map"
                 />
-                <span>{props.t("Map")}</span>
+                <span>{props.t("Maps")}</span>
               </Link>
             </li>
 
@@ -520,26 +520,6 @@ const SidebarContent = props => {
                 </li>
                 <li>
                   <Link to="/icons-fontawesome">{props.t("Font awesome")}</Link>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <Link to="/#" className="has-arrow ">
-                <FeatherIcon
-                  icon="map"
-                />
-                <span>{props.t("Maps")}</span>
-              </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="/maps-google">{props.t("Google")}</Link>
-                </li>
-                <li>
-                  <Link to="/maps-vector">{props.t("Vector")}</Link>
-                </li>
-                <li>
-                  <Link to="/maps-leaflet">{props.t("Leaflet")}</Link>
                 </li>
               </ul>
             </li>
