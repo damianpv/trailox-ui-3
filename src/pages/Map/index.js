@@ -58,7 +58,7 @@ export default connect(
   {}
 )(
   GoogleApiWrapper({
-    apiKey: "AIzaSyDRHxEkakWILmKwTKzSRLvMO8Qx-B7Uu0w",
+    apiKey: process.env.REACT_APP_MAP_KEY,
     LoadingContainer: LoadingContainer,
     v: "3",
   })(Index)
