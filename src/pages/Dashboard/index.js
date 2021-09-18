@@ -25,7 +25,7 @@ import { WidgetsData } from "../../common/data/dashboard";
 // import Trading from './Trading';
 // import Transactions from './Transactions';
 // import RecentActivity from './RecentActivity';
-import RecentActivity from './RecentActivity2';
+import RecentOrders from './RecentOrders';
 // import NewSlider from './NewSlider';
 
 const options = {
@@ -151,7 +151,7 @@ const Dashboard = (props) => {
                     {/*</Row>*/}
 
                     <Row>
-                        <RecentActivity />
+                        <RecentOrders />
                     </Row>
 
                 </Container>

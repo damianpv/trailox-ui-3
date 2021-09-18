@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React from "react"
+import React, { useState, useEffect } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react"
 import { connect } from "react-redux"
 import MetaTags from 'react-meta-tags';
@@ -8,7 +8,23 @@ import MetaTags from 'react-meta-tags';
 const LoadingContainer = () => <div>Loading...</div>
 
 const Index = props => {
+  const excludeBox = 130
+  const [height, setHeight] = useState(window.innerHeight-excludeBox);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newHeight = window.innerHeight-excludeBox;
+      setHeight(newHeight);
+      console.log("updating height");
+    };
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions)
+
+  }, [])
+
   const selectedPlace = {}
+  console.log("give height", height);
 
   function onMarkerClick() {
     alert("You clicked in this marker")
@@ -24,13 +40,12 @@ const Index = props => {
         <div
           id="gmaps-markers"
           className="gmaps"
-          style={{ position: "relative" }}
+          style={{ position: "relative", width: "100%", height: height }}
         >
           <Map
               google={props.google}
               zoom={14}
               // styles={LightData.Data}
-              style={{ width: "100%", height: "100%" }}
             >
               <Marker
                 onClick={(a, b, c) => {
